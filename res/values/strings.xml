@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Tic Tac Toe Game</string>
+    <string name="tic_tac_toe_game"><b>Tic-Tac-Toe Game</b></string>
+    <string name="retry"><b>Reset</b></string>
+    <string name="tap_to_play"><b>Tap To Play!</b></string>
+    <string name="copyright_nightxstudio_productions"><b>© NightXStudio Productions</b></string>
+    <string name="creator_sai_pritam_panda"><b>Creator: SAI PRITAM PANDA</b></string>
+    <string name="made_in_india_made_with_love"><b>Made in INDIA | Made with LOVE  |  Made for ALL</b></string>
+
+    <!-- About Activity -->
+    <string name="logo">logo</string>
+    <string name="contact_us_through">Contact Us Through</string>
+    <string name="production">Production</string>
+    <string name="since_2022"><b>Since 2022</b></string>
+    <string name="email">Email:\n • nightxstudio15@gmail.com</string>
+    <string name="founder_sai_pritam_panda">Founder: Sai Pritam Panda</string>
+    <string name="instagram">instagram</string>
+    <string name="twitter">twitter</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="github">GitHub</string>
+    <string name="buymeacoffee">buymeacoffee</string>
+
+    <!-- Buymeacoffee Activity -->
+    <string name="buymeacoffeeFullText">\"Hello there! If you enjoy the content I create or find my assistance helpful, please consider buying me a coffee. Your support will not only help me stay fueled and motivated but also enables me to continue producing valuable and insightful information. Every cup of coffee contributes to my ongoing efforts to share knowledge and make a positive impact. Your generosity is greatly appreciated, and together, we can make a difference. Thank you for being a part of this journey!\"</string>
+    <string name="from_developer_s_desk">- From Developer\'s Desk</string>
+    <string name="your_blessings">Your Blessings:</string>
+    <string name="donate_10_text"><b>Scan this code in Google Pay only to donate ₹10.\nYour small donation can lead to immense help to our community.\n\nTHANK YOU!</b></string>
+    <string name="donate_30_text"><b>Scan this code in Google Pay only to donate ₹30.\nYour small donation can lead to immense help to our community.\n\nTHANK YOU!</b></string>
+    <string name="donate_50_text"><b>Scan this code in Google Pay only to donate ₹50.\nYour small donation can lead to immense help to our community.\n\nTHANK YOU!</b></string>
+    <string name="chocolate">Chocolate</string>
+    <string name="coffee">Coffee</string>
+    <string name="burger">Burger</string>
+    <string name="donate_10">DONATE ₹10</string>
+    <string name="donate_30">DONATE ₹30</string>
+    <string name="donate_50">DONATE ₹50</string>
+
+    <!-- Menu XML File -->
+    <string name="about">About</string>
+
+
+    <string name="donate_rs10">Donate Rs10</string>
+    <string name="donate_rs30">Donate Rs30</string>
+    <string name="donate_rs50">Donate Rs50</string>
+
+</resources>
