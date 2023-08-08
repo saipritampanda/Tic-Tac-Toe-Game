@@ -15,7 +15,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.MultiFormatReader;
@@ -24,80 +23,25 @@ import com.google.zxing.Reader;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 
-public class BuymeacoffeeActivity extends AppCompatActivity{
+public class Donate10Activity extends AppCompatActivity {
 
-
-    Button chocolateDonate;
-
-    ImageView donate30Image;
-    Button coffeeDonate;
-
-    ImageView donate50Image;
-    Button burgerDonate;
-
-    ImageView donate120Image;
-    Button mealDonate;
+    Button pay10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_buymeacoffee);
+        setContentView(R.layout.activity_donate10);
 
+        pay10 = findViewById(R.id.pay10);
 
-        chocolateDonate = findViewById(R.id.chocolateDonate);
-        coffeeDonate = findViewById(R.id.coffeeDonate);
-        burgerDonate = findViewById(R.id.burgerDonate);
-        mealDonate = findViewById(R.id.mealDonate);
-
-        chocolateDonate.setOnClickListener(new View.OnClickListener() {
+        pay10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BuymeacoffeeActivity.this, Donate10Activity.class);
-                startActivity(intent);
 
-                // Load the QR code image from drawable resource
-                Bitmap qrCodeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.donate_rs10_qrcode_image);
-                decodeAndSearchQRCode(qrCodeBitmap);
+                decodeAndSearchQRCode();
 
             }
         });
-
-        coffeeDonate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(BuymeacoffeeActivity.this, Donate30Activity.class);
-                startActivity(intent);
-
-                // Load the QR code image from drawable resource
-                Bitmap qrCodeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.donate_rs30_qrcode_image);
-                decodeAndSearchQRCode(qrCodeBitmap);
-            }
-        });
-
-        burgerDonate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(BuymeacoffeeActivity.this, Donate50Activity.class);
-                startActivity(intent);
-
-                // Load the QR code image from drawable resource
-                Bitmap qrCodeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.donate_rs50_qrcode_image);
-                decodeAndSearchQRCode(qrCodeBitmap);
-            }
-        });
-
-        mealDonate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(BuymeacoffeeActivity.this, Donate120Activity.class);
-                startActivity(intent);
-
-                // Load the QR code image from drawable resource
-                Bitmap qrCodeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.donate_rs120_qrcode_image);
-                decodeAndSearchQRCode(qrCodeBitmap);
-            }
-        });
-
 
         //Change Action Bar color:
         ActionBar actionBar;
@@ -114,7 +58,9 @@ public class BuymeacoffeeActivity extends AppCompatActivity{
         window.setStatusBarColor(this.getResources().getColor(R.color.black));
     }
 
-    private void decodeAndSearchQRCode(Bitmap qrCodeBitmap) {
+    private void decodeAndSearchQRCode() {
+        // Load the QR code image from drawable resource
+        Bitmap qrCodeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.donate_rs10_qrcode_image);
 
         // Convert the Bitmap to a binary bitmap for QR code scanning
         RGBLuminanceSource source = new RGBLuminanceSource(qrCodeBitmap.getWidth(), qrCodeBitmap.getHeight(), getRGBIntArray(qrCodeBitmap));
@@ -134,6 +80,7 @@ public class BuymeacoffeeActivity extends AppCompatActivity{
             e.printStackTrace();
         }
     }
+
     private void openGoogleSearch(String query) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(query));
         startActivity(intent);
@@ -149,8 +96,7 @@ public class BuymeacoffeeActivity extends AppCompatActivity{
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext() , BuymeacoffeeActivity.class));
     }
-
 }

@@ -187,7 +187,7 @@
                 android:id="@+id/buymeacoffee"
                 android:layout_width="250dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="45dp"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/buymeacoffee"
                 android:contentDescription="@string/buymeacoffee" />
